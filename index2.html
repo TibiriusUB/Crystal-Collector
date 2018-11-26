@@ -14,43 +14,80 @@
         <style>
         body {
         background: url(assets/images/3.jpg) no-repeat;
+        display: inline-block;
         }
-        .START{
+        article{
             display: none;
         }
+        .START{
+            font-family: 'Kumar One', cursive;
+            position: relative;
+            margin: 20px;
+        }
         .title{
-            position:absolute;
+            margin:10px;
             color:cyan;
             background: clear;
-            background-color:darkblue;
-            font-family: 'Kumar One', cursive;
+            background-color:darkblue;          
             padding-top: 20px;
             padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
             font-size: 25px;
-            margin-left: 40px;
-            margin-right: 40px 
+            
         }
-
+        .inst{
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            width: 428px;
+            color:slateblue;
+            margin: 10px;
+            display: block;
+            background-color:papayawhip;
+        }
+        .scoreBoard{
+            background-color:lightgreen;
+        }
+        .tarDisp{
+            margin:10px;
+            display: inline;
+        }
+        .score{
+            margin:10px;
+        }
         </style>
     </head>
 
     <body>
-
+        <article id="instructions"><p>You will be given a random number at the start of the game.</p><br><p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p><br><p>You will win the game if your total score matches the random number. You will lose the game if your score goes above the number.</p><br><p>Each time the game starts, the game will change the value of the crystals.</p>
+        </article>
        
         <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
         <script>
         $(document).ready(function() {
-            // Use the JQuery API to create each <div>, names them one by one , and manuely craft them. Use tricks 
+            // Use the JQuery API to create each <div>, name them one by one , and manuely craft them. Use tricks 
             //     from the Fridge magnet, and calculator excersizes to make the crystal buttons, and CSS the style
             //     into place useing the demo video as a guide. you can do this, it will be fun! :) 
+            
             var START = $("<div></div>").addClass("START");
             $("body").append(START);
             var title = $("<div>Crystal Collector!</div>").addClass("title");
             $(".START").append(title);
-
+            var inst = $("<div></div>").addClass("inst").html("<p>You will be given a random number at the start of the game.</p><br><p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p><br><p>You will win the game if your total score matches the random number. You will lose the game if your score goes above the number.</p><br><p>Each time the game starts, the game will change the value of the crystals.</p>");
+            $(".START").append(inst);
+            var scoreBoard = $("<div></div>").addClass("scoreBoard");
+            $(".START").append("scoreBoard");
+            var tarDisp = $("<div></div>").addClass("tarDisp");
+            $("scoreBoard").append("tarDisp");
+            var score = $("<div></div>").addClass("score");
+            $("scoreBoard").append("score").text("Wins!");
         
         });
         </script>
+
     </body>
    
 </html>
