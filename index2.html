@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!-- google Font Ceviche One, or  "Kumar One (outline)"-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Crystal Collector!</title>
+        <script
+         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Gurajada|Kumar+One|Kumar+One+Outline" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <style>
+        body {
+        background: url(assets/images/3.jpg) no-repeat;
+        }
+        .START{
+            display: none;
+        }
+        .title{
+            position:absolute;
+            color:cyan;
+            background: clear;
+            background-color:darkblue;
+            font-family: 'Kumar One', cursive;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 25px;
+            margin-left: 40px;
+            margin-right: 40px 
+        }
+
+        </style>
+    </head>
+
+    <body>
+
+       
+        <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+        <script>
+        $(document).ready(function() {
+            // Use the JQuery API to create each <div>, names them one by one , and manuely craft them. Use tricks 
+            //     from the Fridge magnet, and calculator excersizes to make the crystal buttons, and CSS the style
+            //     into place useing the demo video as a guide. you can do this, it will be fun! :) 
+            var START = $("<div></div>").addClass("START");
+            $("body").append(START);
+            var title = $("<div>Crystal Collector!</div>").addClass("title");
+            $(".START").append(title);
+
+        
+        });
+        </script>
+    </body>
+   
+</html>
