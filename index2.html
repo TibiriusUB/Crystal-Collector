@@ -16,16 +16,14 @@
         background: url(assets/images/3.jpg) no-repeat;
         display: inline-block;
         }
-        article{
-            display: none;
-        }
+       
         .START{
             font-family: 'Kumar One', cursive;
             position: relative;
             margin: 20px;
         }
         .title{
-            margin:10px;
+            margin:5px;
             color:cyan;
             background: clear;
             background-color:darkblue;          
@@ -34,7 +32,7 @@
             padding-left: 40px;
             padding-right: 40px;
             font-size: 25px;
-            
+            display:inline-block;
         }
         .inst{
             position: relative;
@@ -44,26 +42,47 @@
             padding-right: 40px;
             width: 428px;
             color:slateblue;
-            margin: 10px;
+            margin: 5px;
             display: block;
             background-color:papayawhip;
         }
         .scoreBoard{
-            background-color:lightgreen;
+            height: 130px;
+            width: 428px;
+            
         }
         .tarDisp{
-            margin:10px;
-            display: inline;
+            background-color:lightgreen;
+            text-align: center;
+            color:rgb(119, 62, 136);
+            height: 80px;
+            width: 120px;
+            padding: 20px;
+            float: left;
+            margin: 5px
+            
         }
         .score{
-            margin:10px;
+            background-color:cyan;
+            color: blue;
+            height: 80px;
+            width: 60px;
+            padding: 20px;
+            margin: 5px;
+            float: left;  
         }
+        .GEMBox{
+            position: relative;
+            background-color: aliceblue;
+            height: 80px;
+            width: 255px;
+            margin:5px;
+        }
+
         </style>
     </head>
 
     <body>
-        <article id="instructions"><p>You will be given a random number at the start of the game.</p><br><p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p><br><p>You will win the game if your total score matches the random number. You will lose the game if your score goes above the number.</p><br><p>Each time the game starts, the game will change the value of the crystals.</p>
-        </article>
        
         <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
         <script>
@@ -71,7 +90,7 @@
             // Use the JQuery API to create each <div>, name them one by one , and manuely craft them. Use tricks 
             //     from the Fridge magnet, and calculator excersizes to make the crystal buttons, and CSS the style
             //     into place useing the demo video as a guide. you can do this, it will be fun! :) 
-            
+            var GEMS = ["pearl","amethyst","ruby","sapphire"];
             var START = $("<div></div>").addClass("START");
             $("body").append(START);
             var title = $("<div>Crystal Collector!</div>").addClass("title");
@@ -79,12 +98,25 @@
             var inst = $("<div></div>").addClass("inst").html("<p>You will be given a random number at the start of the game.</p><br><p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p><br><p>You will win the game if your total score matches the random number. You will lose the game if your score goes above the number.</p><br><p>Each time the game starts, the game will change the value of the crystals.</p>");
             $(".START").append(inst);
             var scoreBoard = $("<div></div>").addClass("scoreBoard");
-            $(".START").append("scoreBoard");
-            var tarDisp = $("<div></div>").addClass("tarDisp");
-            $("scoreBoard").append("tarDisp");
-            var score = $("<div></div>").addClass("score");
-            $("scoreBoard").append("score").text("Wins!");
-        
+            $(".START").append(scoreBoard);
+            var tarDisp = $("<div></div>").addClass("tarDisp").text("Target Number:");
+            $(".scoreBoard").append(tarDisp);
+            var score = $("<div></div>").addClass("score").text("wins!");
+            $(".scoreBoard").append(score);
+            var GEMBox = $("<div></div>").addClass("GEMBox");
+            $(".START").append(GEMBox);
+            for (var i = 0; i < GEMS.length; i++) {
+                var GEMBtns = $("<button>");
+                GEMBtns.addClass("GEMBtns").attr(GEMS[i]);
+                GEMBtns.text(GEMS[i]);
+                $(".GEMBox").append(GEMBtns);
+            }
+            var total = $("<div></div>").addClass("total");
+            $(".START").apppend(total);
+            var toDisp = $("<div></div>").addClass("toDisp").text("Your total score is:");
+            $(".total").append(toDisp);
+            var sumtotal = $("<div></div>").addClass("sumtotal");
+            $(".total").append(sumtotal);
         });
         </script>
 
