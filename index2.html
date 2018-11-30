@@ -73,12 +73,49 @@
         }
         .GEMBox{
             position: relative;
-            background-color: aliceblue;
-            height: 80px;
-            width: 255px;
-            margin:5px;
+            height: 70px;
+            width: 280px;
         }
-
+        .total{
+            width:130;
+        }
+        .toDisp{
+            margin: 5px;
+            background-color: rgb(11, 110, 84);
+            color:floralwhite;
+            height: 20px;
+            padding-top: 7px;
+            width: 160px;
+            font-size: 13px;
+        }
+        .sumtotal{
+            margin: 5px;
+            color:floralwhite;
+            background-color: rgb(11, 110, 84);
+            height: 80px;
+            width: 160px;
+            text-align: center;
+        }
+        .GEMBtns{
+            height: 60px;
+            width: 60px;
+            margin:5px
+        }
+        .pearl{
+            background: url(assets/images/pearl.jpg) no-repeat;
+        }
+        /* .amethyst{
+            height: 60px;
+            width: 60px;
+        }
+        .ruby{
+            height: 60px;
+            width: 60px;
+        }
+        .sapphire{
+            height: 60px;
+            width: 60px;
+        } */ */
         </style>
     </head>
 
@@ -108,15 +145,18 @@
             for (var i = 0; i < GEMS.length; i++) {
                 var GEMBtns = $("<button>");
                 GEMBtns.addClass("GEMBtns").attr(GEMS[i]);
-                GEMBtns.text(GEMS[i]);
+               
                 $(".GEMBox").append(GEMBtns);
             }
             var total = $("<div></div>").addClass("total");
-            $(".START").apppend(total);
+            $(".START").append(total);
             var toDisp = $("<div></div>").addClass("toDisp").text("Your total score is:");
             $(".total").append(toDisp);
             var sumtotal = $("<div></div>").addClass("sumtotal");
             $(".total").append(sumtotal);
+            // function.GEMname(x){
+            //     return "(assets/images/" + GEMS[i]+")"
+            //  }
         });
         </script>
 
