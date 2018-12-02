@@ -53,12 +53,13 @@
                 $("h1").text(RanTar)
                 $(".GEMBtns").each(function(index){
                     (this.gemval) = Math.floor((Math.random() * 12) + 1);
-                    console.log( index + ": " + (this.gemval))}); 
+                   // console.log( index + ": " + (this.gemval))
+                }); 
             }else{
                 $(".GEMBtns").off("click");
                 $(".GEMBtns").on ( "click", function() {
                 Scorecount=(this.gemval+Scorecount);
-                console.log(Scorecount);      
+                //console.log(Scorecount);      
                 $("h5").text(Scorecount);
                 if (Scorecount === RanTar){
                     winner(function(){});
