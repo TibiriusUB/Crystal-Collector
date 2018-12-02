@@ -1,10 +1,108 @@
-body
-.title
-.instructions
-.scoreboard
-#target
-#score
-
-.tally
- h4
- .total
+body {
+    background: url(../images/3.jpg) no-repeat;
+    display: inline-block;
+    }
+    h1{
+        font-size: 25;
+    }
+    .START{
+        font-family: 'Kumar One', cursive;
+        position: relative;
+        margin: 20px;
+    }
+    .title{
+        margin:5px;
+        color:cyan;
+        background: clear;
+        background-color:darkblue;          
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 25px;
+        display:inline-block;
+    }
+    .inst{
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 428px;
+        color:slateblue;
+        margin: 5px;
+        display: block;
+        background-color:papayawhip;
+    }
+    .scoreBoard{
+        height: 130px;
+        width: 428px;
+        
+    }
+    .tarDisp{
+        background-color:lightgreen;
+        text-align: center;
+        color:rgb(119, 62, 136);
+        height: 80px;
+        width: 120px;
+        padding: 20px;
+        float: left;
+        margin: 5px
+        
+    }
+    .score{
+        background-color:cyan;
+        color: blue;
+        height: 80px;
+        width: 60px;
+        padding: 20px;
+        margin: 5px;
+        float: left;  
+    }
+    .GEMBox{
+        position: relative;
+        height: 70px;
+        width: 320px;
+        margin: 5px;
+    }
+    .total{
+        width:130;
+        margin: 5px;
+    }
+    .toDisp{
+        margin-bottom: 10px;
+        background-color: rgb(11, 110, 84);
+        color:floralwhite;
+        height: 20px;
+        padding-top: 7px;
+        width: 160px;
+        font-size: 13px;
+    }
+    .sumtotal{
+        color:floralwhite;
+        background-color: rgb(11, 110, 84);
+        height: 80px;
+        width: 160px;
+        text-align: center;
+    }
+    .GEMBtns{
+        height: 65px;
+        width: 65px;
+        margin-right: 10px;
+    }
+    .sumtotal{
+        padding:10;
+        text-align: center
+    }
+    #rosequartz{
+        background-image: url("../images/rosequartz.gif");            
+    }
+    #amethyst{
+        background-image: url("../images/amethyst.gif");
+    }
+    #ruby{
+        background-image: url("../images/ruby.gif");
+    }
+    #sapphire{
+        background-image: url("../images/sapphire.gif");
+    }
