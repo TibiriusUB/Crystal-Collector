@@ -125,7 +125,7 @@
 
     <body>
        
-        <!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+        
         <script>
         $(document).ready(function() {
             // Use the JQuery API to create each <div>, name them one by one , and manuely craft them. Use tricks 
@@ -176,17 +176,19 @@
                     RanTar = Math.floor((Math.random() * 100) + 19);
                     $("h1").text(RanTar)
                     $(".GEMBtns").each(function(index){
-                        this.gemval = Math.floor((Math.random() * 12) + 1);
-                        console.log( index + ": " + (this.gemval))
-                    });  
+                        (this.gemval) = Math.floor((Math.random() * 12) + 1);
+                        console.log( index + ": " + (this.gemval))}); 
                 }else{
-                    $(".GEMBtns").on("click",function(){
-                        Scorecount= ((this.gemval)+Scorecount);
-                        $("h5").text(Scorecount);
-                    })
+                    $(".GEMBtns").click(function(){
+                    var score=((this.gemval)+Scorecount);
+                    console.log(score);
+                        
+                    $("h5").text(Scorecount);});
+                    
                 };
+            
             });
-            console.log(this.gemval);
+           
         });
         </script>
 
